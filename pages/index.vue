@@ -11,7 +11,7 @@
       </section>
     </div>
     <div class="col-12 md:col-6 overflow-hidden">
-      <img src="images/hero-3.jpg" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
+      <img src="/images/hero-3.jpg" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
     </div>
   </div>
 </template>
