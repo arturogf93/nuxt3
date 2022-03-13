@@ -6,8 +6,7 @@ const { data } = await useFetch('https://pokeapi.co/api/v2/pokemon/ditto')
 		<Head>
 			<Title>{{ data.name }}</Title>
 			<Meta name="description" :content="`My page's ${data.name} description`" />
-			<Link rel="preload" href="/test.txt" as="script" />
-			<Style type="text/css" :children="styleString" />
+			<Meta property="og:image" :content="data.sprites.other['official-artwork'].front_default" />
 		</Head>
 	</Html>
 	<div>
