@@ -1,14 +1,9 @@
 <script setup>
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 const route = useRoute()
-const router = useRouter()
-const { data, error } = await useFetch(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)	
-onMounted(() => {
-  if (error.value) {
-		if (error.value.response.status === 404) {
-			router.push('/not-found')
-		}
-	}
+const { data, error } = useAsyncData('todos', async () =>  {
+      const response = await $fetch(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`);
+      return response
 })
 </script>
 <template>
