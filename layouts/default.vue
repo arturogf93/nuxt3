@@ -21,6 +21,14 @@
 							</nuxt-link>
 						</li>
 						<li>
+							<nuxt-link to="/pokemon/0">
+								<a class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer">
+									<i class="pi pi-calendar mr-2" />
+									<span>Pokemon 0</span>
+								</a>
+							</nuxt-link>
+						</li>
+						<li>
 							<nuxt-link to="/pokemon/1">
 								<a class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer">
 									<i class="pi pi-calendar mr-2" />
@@ -29,7 +37,7 @@
 							</nuxt-link>
 						</li>
 						<li>
-							<nuxt-link to="/pokemon2/5">
+							<nuxt-link to="/pokemon/4">
 								<a class="flex px-6 p-3 lg:px-3 lg:py-2 align-items-center text-600 hover:text-900 hover:surface-100 font-medium border-round cursor-pointer">
 								<i class="pi pi-chart-line mr-2" />
 								<span>Pokemon 2</span>
