@@ -7,8 +7,8 @@ const { data, error } = useAsyncData('todos', async () =>  {
 })
 </script>
 <template>
-	<div>
-		<Html v-if="data">
+	<div v-if="data">
+		<Html>
 			<Head>
 				<Title>{{ data.name }}</Title>
 				<Meta name="description" :content="`My page's ${data.name} description`" />

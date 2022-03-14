@@ -10,9 +10,10 @@ const { data } = await useFetch('https://pokeapi.co/api/v2/pokemon/ditto')
 				<Meta property="og:image" :content="data.sprites.other['official-artwork'].front_default" />
 			</Head>
 		</Html>
-		pokemon:
-		<code>
-			<!-- {{ data }} -->
-		</code>
+		<div class="container text-center">
+			<img :src="data.sprites.other['official-artwork'].front_default" alt="">
+			<div>{{ data.name }}</div>
+			<!-- <div>{{ error }}</div> -->
+		</div>
 	</div>
 </template>
