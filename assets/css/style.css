@@ -185,6 +185,13 @@ a {
     font-weight: unset;
 }
 
+.product-card-container {
+    height: 100%;
+}
+.product-card-container .p-card .p-card-content {
+    padding: 0 !important;
+}
+
 /*------------------------------------------*/
 
 @keyframes background-fade {
