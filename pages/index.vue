@@ -103,8 +103,7 @@
 </template>
 
 <script setup>
-	const { data } = await useFetch(`https://api.multycultybeauty.com/open/related/products?limit=8`)
-	console.log('data', data.value.data)
+	const { data } = await useFetch(`https://store-api.regiosoft.mx/open/products?limit=8&offset=0`)
 	const products = data.value.data.items
   const products2 = [
 		{ "id": "1000", "code": "f230fh0g3", "name": "Bambu Watch", "description": "Product Description", "image": "bamboo-watch.jpg", "price": 65, "category": "Accessories", "quantity": 24, "inventoryStatus": "INSTOCK", "rating": 5 },

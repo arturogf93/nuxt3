@@ -1,15 +1,18 @@
 <script setup>
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import NotFound from '../components/NotFound.vue'
 const route = useRoute()
-const router = useRouter()
-const { data, error } = await useFetch(`https://api.multycultybeauty.com/open/product/${route.params.uuid}`)	
+const { data, error } = await useFetch(`https://store-api.regiosoft.mx/open/product/${route.params.uuid}`)
 const product = data.value.data
 // if (error.value) {
 // 	if (error.value.response.status === 404) {
 // 		router.push('/not-found')
 // 	}
 // }
+async function getItem() {
+  const response = await $fetch(`https://store-api.regiosoft.mx/open/product/${route.params.uuid}`)
+  console.log(response)
+}
 </script>
 <template>
 	<div>
@@ -26,8 +29,11 @@ const product = data.value.data
 				<div>{{ product.name }}</div>
 				<!-- <div>{{ error }}</div> -->
 			</div>
+      <div class="text-center my-5">
+        <Button label="GET" @click="getItem()"></Button>
+      </div>
 		</div>
-		
+
 		<!--404-->
 		<NotFound v-else />
 	</div>
